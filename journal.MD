@@ -15,7 +15,7 @@ i figued out how to use outlines in ergogen, and that allowed me to create this 
 
 i also learned how to turn the Ergogen yaml file into a KiCAD pcb and with a microcontroller, switches, and diodes, and automate the creation of the matrix net (?) so i dont have to do it all in a schematic! (for me as a first timer, this was 100% slower than it would have been to do manually in a schematic in KiCAD, but i was already too far in and now if i want to make another keyboard in the future, i know how to do it in a way that i can rapidly iterate :D )
 
-![screenshot of the board imported into KiCAD](board_kicad.png)
+![screenshot of the board imported into KiCAD](journal_photos/board_kicad.png)
 
 tomorrow im going to add the rotary encoders, and route the whole pcb ! 
 ### time spent 5 hrs
