@@ -21,3 +21,8 @@ tomorrow im going to add the rotary encoders, and route the whole pcb !
 ### time spent 5 hrs
 
 ## July 2nd
+i found this super cool diy scroll-wheel style encoder that will make it a lot easier to use with 1 thumb to navigate text than an ec11 style encoder! (i'm hoping using these is allowed since its a super small part of the project, and i don't own a 3d printer so iterating something like this to a workable state would be an absolute nightmare (if not ill just swap them out with some (less usable + more expensive) ec11 encoders))
+
+anyways, i made a few tiny changes to the outline on the ergogen file, got it to _actually_ make the matrix for me, and finished routing the left half of the pcb and i think it looks pretty good :) ill do the right half tomorrow hopefully 
+![photo of the left half of my keyboard routed](journal_photos/board_left_routed.png)
+### time spent: 4 hrs
