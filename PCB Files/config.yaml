@@ -1,0 +1,243 @@
+# ergogen v4.0.4
+
+units:
+  kx: cx 
+  ky: cy
+  
+  px: kx + 2
+  py: ky + 2
+
+
+  padx:  2
+  pady:  2
+
+points:
+  zones:
+    matrix:
+      anchor:
+        shift: [75, -150]
+      key:
+        padding: 1ky
+        spread: 1kx
+      columns:
+        outer:
+          key:
+            width: 1.5cx
+            column_net: P10
+        pinky:
+          key:
+            stagger: 2
+            spread: kx + 0.25cx
+            column_net: P16
+        ring:
+          key:
+            stagger: 4
+            column_net: P14
+        middle:
+          key:
+            stagger: 2
+            column_net: P15
+        index:
+          key:
+            stagger: -2
+            column_net: P18
+          rows:
+              mod:
+                skip: true
+        inner:
+          key:
+            stagger: -2
+            column_net: P19
+            
+          rows:
+              mod:
+                skip: true
+        inner2:
+          key:
+            stagger: -4
+            column_net: P20
+          rows:
+              mod:
+                skip: true          
+      rows:
+        mod:
+          row_net: P6
+        bottom:
+          row_net: P5
+        home:
+          row_net: P4
+        top:
+          row_net: P3
+        numbers:
+          row_net: P2
+    thumb: 
+      anchor: 
+        matrix_middle_mod
+      key:
+        shift: [1.5cx, -0.35cx]
+        rotate: -10
+        width: 1.5cx
+        column_net: P18
+        row_net: P6
+  
+  mirror: 
+    ref: matrix_inner2_numbers
+    distance: 5cx
+
+
+
+
+outlines:
+  raw:
+    - what: rectangle
+      where: true
+      size: [px, py]
+      fillet: 2
+  keys: 
+    - what: rectangle
+      where: true
+      size: [kx-0.5, ky-0.5]
+  keys15: 
+    - what: rectangle
+      where: true
+      size: [kx-0.5, ky-0.5]    
+  switchHoles:
+    - what: rectangle
+      where: true
+      size: [14, 14]
+      fillet: 0
+  boardLeft:
+    - what: polygon
+      operation: stack
+      points: 
+        - ref: matrix_outer_numbers
+          shift: [-0.85px,0.6px]
+        - ref: matrix_middle_numbers
+          shift: [0px,0.6px]
+        - ref: matrix_inner2_numbers
+          shift: [0.55px,0.6px]
+        - ref: matrix_inner2_bottom
+          shift: [0.55px,.23px]
+        - ref: matrix_inner2_bottom
+          shift: [1.95px,-.2px]
+        - ref: matrix_inner2_bottom
+          shift: [1.4px,-2.0px]
+        - ref: matrix_inner2_bottom
+          shift: [-1.px,-2px]  
+        - ref: matrix_middle_mod
+          shift: [0,-0.9px]
+        - ref: matrix_outer_mod
+          shift: [-0.85px,-0.5px]
+
+      fillet: 2 
+
+  boardRight: 
+    - what: polygon
+      operation: stack
+      points: 
+        - ref: mirror_matrix_outer_numbers
+          shift: [-0.85px,0.6px]
+        - ref: mirror_matrix_middle_numbers
+          shift: [0,0.6px]
+        - ref: mirror_matrix_inner2_numbers
+          shift: [0.55px,0.6px]
+        - ref: mirror_matrix_inner2_bottom
+          shift: [0.55px,.23px]
+        - ref: mirror_matrix_inner2_bottom
+          shift: [1.95px,-.2px]
+        - ref: mirror_matrix_inner2_bottom
+          shift: [1.4px,-2.0px]
+        - ref: mirror_matrix_inner2_bottom
+          shift: [-1.px,-2px]  
+        - ref: mirror_matrix_middle_mod
+          shift: [0,-0.9px]
+        - ref: mirror_matrix_outer_mod
+          shift: [-0.85px,-0.5px]
+        
+      fillet: 2
+
+
+
+
+  combo: 
+    - name: boardLeft
+    - name: keys
+    #- name: boardRight
+      operation: stack
+  key_cutouts:
+    - name: boardLeft
+    - operation: subtract
+      name: switchHoles
+      
+
+
+
+pcbs:
+  atlasleft:
+    outlines:
+      main:
+        outline: boardLeft
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: /^(matrix_|thumb).*/
+        params:
+          keycaps: true
+          reverse: false
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+
+      diode:
+        what: diode
+        where: /^(matrix_|thumb).*/
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
+      promicro:
+        what: promicro
+        params:
+          orientation: "up"
+        where:
+          ref: matrix_inner2_bottom
+          shift: [1.0591cx,-1.0cx]
+          rotate: -105.9
+
+  atlasright:
+    outlines:
+      main:
+        outline: boardRight
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: /^(mirror_matrix_|mirror_thumb).*/
+        params:
+          keycaps: true
+          reverse: false
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: /^(mirror_matrix_|mirror_thumb).*/
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
+      promicro:
+        what: promicro
+        params:
+          orientation: "up"
+        where:
+          ref: mirror_matrix_inner2_bottom
+          shift: [1.0591cx,-1.0cx]
+          rotate: 73.4-0.7
+
+
+cases:
+  plate:
+    - name: key_cutouts
+      extrude: 1.2
