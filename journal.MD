@@ -25,4 +25,24 @@ i found this super cool diy scroll-wheel style encoder that will make it a lot e
 
 anyways, i made a few tiny changes to the outline on the ergogen file, got it to _actually_ make the matrix for me, and finished routing the left half of the pcb and i think it looks pretty good :) ill do the right half tomorrow hopefully 
 ![photo of the left half of my keyboard routed](journal_photos/board_left_routed.png)
-### time spent: 4 hrs
+### time spent: 6 hrs
+
+
+## July 3rd 
+huge day today
+i finished routing the right half of the board and made some minor changes to some of the parts (added mounting holes, normalized microcontroller location, created a minor design for the silkscreen) 
+![photo of both sides of my pcb](journal_photos/dual_pcb.png)
+
+then i figured out how to use ergogen to export a dxf for the plate, and imported that to fusion and began modeling a case. my initial design totally flopped so that was like 4 of my hours today lol 
+
+anyways, heres the case i ended up going with. Its a sandwich mount without the top frame in order to keep this keyboard super low profile. 
+![photo of my assembled case](journal_photos/case_assembled.png)
+![photo of my disassembled case](journal_photos/case_disassembled.png)
+
+
+here's the stl's i exported that i plan on printing, i added a little channel on the side that i can slide stands into to adjust the tent angle in the future if i want since thats something that's important to me. 
+![photo of my exported stl's](journal_photos/stl_exports.png)
+
+finally, i created a BOM and added a bunch of relevant files to this repo :)
+
+### time spent: 14hrs
