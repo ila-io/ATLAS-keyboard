@@ -5,6 +5,8 @@ description: "A 66 key super low profile split keyboard!"
 created_at: "2025-06-29"
 ---
 
+Total Time Spent (review 1): 34 hrs
+
 
 ## June 29th
 today i did some research into split keybaord layouts and tools for designing them. i learned how to use [Ergogen](https://github.com/ergogen/ergogen) to define a keyboard layout and designed this! i'm gonna use choc switches and low profile keycaps, and try to give the keyboard a clean, industrial look. 
