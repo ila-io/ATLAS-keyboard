@@ -61,4 +61,4 @@ I think im about ready to submit!!
 
 no photos for today since they would just be screenshots of vscode, and you can see exactly what i did in ./firmware! 
 
-## 4 hours 
+### time spent: 4 hours 
