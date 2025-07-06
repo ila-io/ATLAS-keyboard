@@ -6,7 +6,7 @@ In exploring split keyboard layouts, I found that not many of them had all the k
 
 ![photo of full keyboard](journal_photos/case_assembled.png)
 ![photo of keyboard layout](journal_photos/key_layout.png)
-![photo of full keyboard disassembled](journal_photos/case_disssembled.png)
+![photo of full keyboard disassembled](journal_photos/case_disassembled.png)
 ![photo of parts to print](journal_photos/stl_exports.png)
 ![photo of left and right PCBs](journal_photos/dual_pcb2.png)
 ![photo of ergogen generation](journal_photos/ergogen.png)
