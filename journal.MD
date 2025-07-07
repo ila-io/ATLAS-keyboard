@@ -6,6 +6,7 @@ created_at: "2025-06-29"
 ---
 
 Total Time Spent (review 1): 34 hrs
+Total Time Spent (review 2): 36 hrs
 
 
 ## June 29th
@@ -55,7 +56,7 @@ here's the stl's i exported that i plan on printing, i added a little channel on
 
 finally, i created a BOM and added a bunch of relevant files to this repo :)
 
-### time spent: 14hrs
+### time spent: 14 hrs
 
 ## July 4th and 5th
 Not a lot to report, just wrote the qmk firmware for each half of the keybaord, and made a readme :3
@@ -63,4 +64,11 @@ I think im about ready to submit!!
 
 no photos for today since they would just be screenshots of vscode, and you can see exactly what i did in ./firmware! 
 
-### time spent: 4 hours 
+### time spent: 4 hrs 
+
+
+## July 7th
+created reference schematic files, since my reviewer asked for them
+![schematic](journal_photos/schematic.png)
+## time spent: 2 hrs
+
