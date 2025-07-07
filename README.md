@@ -11,7 +11,8 @@ In exploring split keyboard layouts, I found that not many of them had all the k
 ![photo of parts to print](journal_photos/stl_exports.png)
 ![photo of left and right PCBs](journal_photos/dual_pcb2.png)
 ![photo of ergogen generation](journal_photos/ergogen.png)
-(no schematic, all done through ergogen!) 
+![photo of schematic](journal_photos/schematic.png)
+### NOTE: PCB's are based off of the [config.yaml](PCB files/config.yaml) Ergogen file, schematics are only used as reference.
 
 
 
